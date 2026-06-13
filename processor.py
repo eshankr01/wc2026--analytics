@@ -416,51 +416,110 @@ def get_comparison(team_data_a, team_data_b):
 
 # ── Probability model inputs ──────────────────────────────────
 
-def get_probability_inputs(team_data_a, team_data_b):
+def get_probability_inputs(team_data_a, team_data_b, team_a_is_home=True):
     """
     Prepare clean inputs for the probability model.
-    Separates home/away correctly based on which team
-    is at home for this specific match.
+    Now includes home advantage, FIFA ranking, and injury penalty.
 
-    The actual probability calculation lives in a separate
-    model function — this just prepares the inputs so
-    the model can be swapped without touching this file.
+    Args:
+        team_data_a:     first team's data dict
+        team_data_b:     second team's data dict
+        team_a_is_home:  True if team A is playing at home
 
     Returns:
         {
-            "team_a": {
-                "avg_scored":   float,
-                "avg_conceded": float,
-                "form_ppg":     float,
-                "xg_for":       float,
-                "xg_against":   float,
-            },
-            "team_b": { same structure },
+            "team_a": { strength inputs },
+            "team_b": { strength inputs },
             "h2h_available": bool,
         }
     """
+    from config import (
+        WEIGHT_FORM_PPG, WEIGHT_XG_FOR, WEIGHT_GOALS_FOR, WEIGHT_DEFENSE,
+        HOME_ADVANTAGE_WEIGHT, FIFA_RANKING_WEIGHT, FIFA_RANKING_MAX,
+        INJURY_PENALTY_ATTACK, INJURY_PENALTY_MID, INJURY_PENALTY_DEF,
+        INJURY_PENALTY_MAX,
+    )
+
     summary_a = get_team_summary(team_data_a)
     summary_b = get_team_summary(team_data_b)
 
-    def extract_inputs(summary):
+    def calc_injury_penalty(team_data):
+        """
+        Sum up injury penalties across all injured players.
+        Each position has a different weight — forwards matter
+        more for attack than defenders.
+        Capped at INJURY_PENALTY_MAX so one bad injury
+        doesn't completely destroy the prediction.
+        """
+        penalty = 0.0
+        for player in team_data.get("players", []):
+            if player.get("injured", False):
+                pos = player.get("pos", player.get("position", "MID"))
+                if pos == "FWD":
+                    penalty += INJURY_PENALTY_ATTACK
+                elif pos == "MID":
+                    penalty += INJURY_PENALTY_MID
+                elif pos == "DEF":
+                    penalty += INJURY_PENALTY_DEF
+        return min(penalty, INJURY_PENALTY_MAX)
+
+    def calc_ranking_boost(fifa_rank):
+        """
+        Convert FIFA rank into a 0-1 boost.
+        Rank 1   → boost 1.0 (best possible)
+        Rank 100 → boost 0.5
+        Rank 200 → boost 0.0
+        Linear scale — simple and transparent.
+        """
+        rank = safe_float(fifa_rank, default=100)
+        boost = max(0.0, (FIFA_RANKING_MAX - rank) / FIFA_RANKING_MAX)
+        return round(boost, 3)
+
+    def extract_inputs(summary, team_data, is_home):
         avg = summary["all"]
+
+        # Base strength from form, xG, goals, defense
+        base_strength = (
+            safe_float(summary["form"].get("pointsPerGame", 0)) * WEIGHT_FORM_PPG +
+            safe_float(avg.get("xg",           0))              * WEIGHT_XG_FOR   +
+            safe_float(avg.get("goals",         0))              * WEIGHT_GOALS_FOR +
+            max(0, 3 - safe_float(avg.get("goalsAgainst", 0)))  * WEIGHT_DEFENSE
+        )
+
+        # Home advantage boost
+        home_boost = HOME_ADVANTAGE_WEIGHT if is_home else 0.0
+
+        # FIFA ranking boost
+        fifa_rank   = team_data.get("fifa", 100)
+        rank_boost  = calc_ranking_boost(fifa_rank) * FIFA_RANKING_WEIGHT
+
+        # Injury penalty — reduces strength
+        injury_pen  = calc_injury_penalty(team_data)
+
+        # Final strength score
+        total_strength = max(0.01, base_strength + home_boost + rank_boost - injury_pen)
+
         return {
-            "avg_scored":   safe_float(avg.get("goals",        0)),
-            "avg_conceded": safe_float(avg.get("goalsAgainst", 0)),
-            "form_ppg":     safe_float(summary["form"].get("pointsPerGame", 0)),
-            "xg_for":       safe_float(avg.get("xg",           0)),
-            "xg_against":   safe_float(avg.get("xgAgainst",    0)),
-            "consistency":  safe_float(avg.get("goalsStdDev",  0)),
+            "avg_scored":    safe_float(avg.get("goals",        0)),
+            "avg_conceded":  safe_float(avg.get("goalsAgainst", 0)),
+            "form_ppg":      safe_float(summary["form"].get("pointsPerGame", 0)),
+            "xg_for":        safe_float(avg.get("xg",           0)),
+            "xg_against":    safe_float(avg.get("xgAgainst",    0)),
+            "consistency":   safe_float(avg.get("goalsStdDev",  0)),
+            "home_boost":    round(home_boost, 3),
+            "rank_boost":    round(rank_boost, 3),
+            "injury_pen":    round(injury_pen, 3),
+            "strength":      round(total_strength, 3),
         }
 
-    # Check if H2H data exists
+    # Check H2H availability
     h2h_a = team_data_a.get("h2h", {})
     h2h_b = team_data_b.get("h2h", {})
     h2h_available = bool(h2h_a.get("rows") or h2h_b.get("rows"))
 
     return {
-        "team_a":        extract_inputs(summary_a),
-        "team_b":        extract_inputs(summary_b),
+        "team_a":        extract_inputs(summary_a, team_data_a, is_home=team_a_is_home),
+        "team_b":        extract_inputs(summary_b, team_data_b, is_home=not team_a_is_home),
         "h2h_available": h2h_available,
     }
 

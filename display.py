@@ -571,9 +571,25 @@ def show_probabilities(team_data_a, team_data_b):
     """
     import math
 
-    prob_inputs = get_probability_inputs(team_data_a, team_data_b)
+    home_team = st.radio(
+        "Which team is playing at home?",
+        options=[
+            team_data_a.get("name", "Team A"),
+            team_data_b.get("name", "Team B"),
+            "Neutral venue",
+        ],
+        horizontal=True,
+        label_visibility="collapsed",
+        key="home_team_selector",
+    )
+    team_a_is_home = home_team == team_data_a.get("name", "Team A")
+    prob_inputs = get_probability_inputs(team_data_a, team_data_b, team_a_is_home=team_a_is_home)
     inp_a = prob_inputs["team_a"]
     inp_b = prob_inputs["team_b"]
+
+    # Home team selector
+    st.caption("Select which team is playing at home")
+    
 
     name_a = team_data_a.get("name", "Team A")
     name_b = team_data_b.get("name", "Team B")
@@ -583,30 +599,26 @@ def show_probabilities(team_data_a, team_data_b):
     # ── Simple model ──────────────────────────────────────────
     # Weighted score combining form, xG, and goals
     # Weights can be tuned in config later
-    def team_strength(inp):
-        return (
-            inp["form_ppg"]     * 0.35 +
-            inp["xg_for"]       * 0.35 +
-            inp["avg_scored"]   * 0.20 +
-            (3 - inp["avg_conceded"]) * 0.10
-        )
-
-    strength_a = max(team_strength(inp_a), 0.01)
-    strength_b = max(team_strength(inp_b), 0.01)
+      # Strength already calculated in processor including
+    # home advantage, FIFA ranking, and injury penalty
+    strength_a = max(inp_a.get("strength", 0.01), 0.01)
+    strength_b = max(inp_b.get("strength", 0.01), 0.01)
     total      = strength_a + strength_b
 
-    # Raw win probabilities
-    raw_win_a  = strength_a / total
-    raw_win_b  = strength_b / total
+    # Raw win probabilities from strength scores
+    raw_win_a = strength_a / total
+    raw_win_b = strength_b / total
 
-    # Draw probability — higher when teams are close in strength
-    closeness   = 1 - abs(raw_win_a - raw_win_b)
-    draw_prob   = round(closeness * 0.28, 3)   # 28% max draw probability
+    # Draw probability — higher when teams are closely matched
+    from config import DRAW_PROB_MAX
+    closeness  = 1 - abs(raw_win_a - raw_win_b)
+    draw_prob  = round(closeness * DRAW_PROB_MAX, 3)
 
     # Normalise to sum to 1
-    remaining   = 1 - draw_prob
-    win_a_prob  = round(raw_win_a * remaining, 3)
-    win_b_prob  = round(raw_win_b * remaining, 3)
+    remaining  = 1 - draw_prob
+    win_a_prob = round(raw_win_a * remaining, 3)
+    win_b_prob = round(raw_win_b * remaining, 3)
+
 
     # Implied fair odds (decimal)
     def to_decimal_odds(prob):

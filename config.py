@@ -174,16 +174,18 @@ LIVE_REFRESH_INTERVAL = 60   # seconds between auto-refresh during matches
 
 
 # ── Probability & odds model settings ────────────────────────
-# Foundation layer — models plug in here later without touching display
 
 # Which inputs feed the probability model
 PROB_MODEL_INPUTS = [
-    "form",           # W/D/L over last N matches
-    "xg_for",         # average xG scored
-    "xg_against",     # average xG conceded
-    "goals_for",      # average goals scored
-    "goals_against",  # average goals conceded
-    "h2h_record",     # historical H2H if available
+    "form",
+    "xg_for",
+    "xg_against",
+    "goals_for",
+    "goals_against",
+    "h2h_record",
+    "home_advantage",
+    "fifa_ranking",
+    "injuries",
 ]
 
 # Result labels
@@ -192,13 +194,52 @@ RESULT_LABELS = ["Home win", "Draw", "Away win"]
 # Minimum matches needed before model runs
 PROB_MIN_MATCHES = 3
 
-# Odds format to display (can switch without touching model)
-# Options: "decimal", "fractional", "american"
+# Odds format
 ODDS_FORMAT = "decimal"
 
-# Value threshold — highlight a bet as "value" if edge exceeds this
-VALUE_THRESHOLD = 0.05   # 5% edge over implied odds
+# Value threshold
+VALUE_THRESHOLD = 0.05
 
+# ── Model weights ─────────────────────────────────────────────
+# These three control how much each factor influences strength score
+# Must sum to 1.0 across form/xg/goals weights
+# Adjust here to tune the model — never hardcode in processor.py
+
+WEIGHT_FORM_PPG   = 0.30   # recent form points per game
+WEIGHT_XG_FOR     = 0.35   # xG quality of chances created
+WEIGHT_GOALS_FOR  = 0.20   # raw goals scored
+WEIGHT_DEFENSE    = 0.15   # goals conceded (inverted)
+
+# ── Home advantage ────────────────────────────────────────────
+# Added directly to home team's strength score
+# 0.15 means home team gets ~15% boost — calibrated to football data
+# Set to 0.0 to disable entirely
+HOME_ADVANTAGE_WEIGHT = 0.15
+
+# ── FIFA ranking adjustment ───────────────────────────────────
+# Scales how much FIFA rank influences the probability
+# Higher = ranking matters more, lower = form matters more
+# 0.0 disables ranking adjustment entirely
+FIFA_RANKING_WEIGHT = 0.10
+
+# Best possible FIFA ranking (used for normalisation)
+# Rank 1 gets full boost, rank 200 gets zero boost
+FIFA_RANKING_MAX = 200
+
+# ── Injury model ──────────────────────────────────────────────
+# How much each injured key player reduces attack strength
+# A team with 2 injured forwards loses 2 * INJURY_PENALTY_ATTACK
+INJURY_PENALTY_ATTACK  = 0.08   # per injured FWD
+INJURY_PENALTY_MID     = 0.05   # per injured MID
+INJURY_PENALTY_DEF     = 0.03   # per injured DEF
+
+# Maximum total injury penalty (cap so it doesn't over-penalise)
+INJURY_PENALTY_MAX = 0.20
+
+# ── Draw probability ──────────────────────────────────────────
+# Maximum draw probability when teams are perfectly matched
+# Football average is ~26-28% draws in tournament play
+DRAW_PROB_MAX = 0.28
 
 # ── Display settings ──────────────────────────────────────────
 
