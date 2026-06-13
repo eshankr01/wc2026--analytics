@@ -13,26 +13,47 @@ TOURNAMENT_NAME = "FIFA World Cup 2026"
 MATCHES_TO_ANALYZE = 10
 
 GROUPS = {
-    "A": ["Qatar", "Canada", "Ecuador", "Netherlands"],
-    "B": ["USA", "Paraguay", "Australia", "Turkey"],
-    "C": ["Spain", "Croatia", "Morocco", "Japan"],
-    "D": ["Argentina", "Chile", "Peru", "Canada"],
-    "E": ["France", "Senegal", "Belgium", "Austria"],
-    "F": ["Brazil", "Serbia", "Switzerland", "Cameroon"],
-    "G": ["England", "Iran", "New Zealand", "Burkina Faso"],
-    "H": ["Portugal", "Uruguay", "South Korea", "Ghana"],
+    "A": ["Mexico", "South Korea", "Czechia", "South Africa"],
+    "B": ["Canada", "Bosnia and Herzegovina", "Qatar", "Switzerland"],
+    "C": ["Brazil", "Haiti", "Morocco", "Scotland"],
+    "D": ["USA", "Australia", "Turkiye", "Paraguay"],
+    "E": ["Curacao", "Ecuador", "Germany", "Ivory Coast"],
+    "F": ["Japan", "Netherlands", "Sweden", "Tunisia"],
+    "G": ["Belgium", "Egypt", "Iran", "New Zealand"],
+    "H": ["Cape Verde", "Saudi Arabia", "Spain", "Uruguay"],
+    "I": ["France", "Iraq", "Norway", "Senegal"],
+    "J": ["Algeria", "Argentina", "Austria", "Jordan"],
+    "K": ["Colombia", "DR Congo", "Portugal", "Uzbekistan"],
+    "L": ["Croatia", "England", "Ghana", "Panama"],
 }
 
 FLAGS = {
-    "USA": "🇺🇸", "Paraguay": "🇵🇾", "Australia": "🇦🇺", "Turkey": "🇹🇷",
-    "Qatar": "🇶🇦", "Canada": "🇨🇦", "Ecuador": "🇪🇨", "Netherlands": "🇳🇱",
-    "Spain": "🇪🇸", "Croatia": "🇭🇷", "Morocco": "🇲🇦", "Japan": "🇯🇵",
-    "Argentina": "🇦🇷", "Chile": "🇨🇱", "Peru": "🇵🇪",
-    "France": "🇫🇷", "Senegal": "🇸🇳", "Belgium": "🇧🇪", "Austria": "🇦🇹",
-    "Brazil": "🇧🇷", "Serbia": "🇷🇸", "Switzerland": "🇨🇭", "Cameroon": "🇨🇲",
-    "England": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "Iran": "🇮🇷", "New Zealand": "🇳🇿", "Burkina Faso": "🇧🇫",
-    "Portugal": "🇵🇹", "Uruguay": "🇺🇾", "South Korea": "🇰🇷", "Ghana": "🇬🇭",
+    # Group A
+    "Mexico": "🇲🇽", "South Korea": "🇰🇷", "Czechia": "🇨🇿", "South Africa": "🇿🇦",
+    # Group B
+    "Canada": "🇨🇦", "Bosnia and Herzegovina": "🇧🇦", "Qatar": "🇶🇦", "Switzerland": "🇨🇭",
+    # Group C
+    "Brazil": "🇧🇷", "Haiti": "🇭🇹", "Morocco": "🇲🇦", "Scotland": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+    # Group D
+    "USA": "🇺🇸", "Australia": "🇦🇺", "Turkiye": "🇹🇷", "Paraguay": "🇵🇾",
+    # Group E
+    "Curacao": "🇨🇼", "Ecuador": "🇪🇨", "Germany": "🇩🇪", "Ivory Coast": "🇨🇮",
+    # Group F
+    "Japan": "🇯🇵", "Netherlands": "🇳🇱", "Sweden": "🇸🇪", "Tunisia": "🇹🇳",
+    # Group G
+    "Belgium": "🇧🇪", "Egypt": "🇪🇬", "Iran": "🇮🇷", "New Zealand": "🇳🇿",
+    # Group H
+    "Cape Verde": "🇨🇻", "Saudi Arabia": "🇸🇦", "Spain": "🇪🇸", "Uruguay": "🇺🇾",
+    # Group I
+    "France": "🇫🇷", "Iraq": "🇮🇶", "Norway": "🇳🇴", "Senegal": "🇸🇳",
+    # Group J
+    "Algeria": "🇩🇿", "Argentina": "🇦🇷", "Austria": "🇦🇹", "Jordan": "🇯🇴",
+    # Group K
+    "Colombia": "🇨🇴", "DR Congo": "🇨🇩", "Portugal": "🇵🇹", "Uzbekistan": "🇺🇿",
+    # Group L
+    "Croatia": "🇭🇷", "England": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "Ghana": "🇬🇭", "Panama": "🇵🇦",
 }
+
 
 
 # ── Player stat definitions ───────────────────────────────────

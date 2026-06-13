@@ -13,6 +13,15 @@ from config import (
     DATA_FILE,
     MATCHES_TO_ANALYZE,
 )
+from display import (
+    show_team_header,
+    show_team_averages,
+    show_match_cards,
+    show_player_cards,
+    show_comparison,
+    show_h2h,
+    show_probabilities,
+)
 
 
 # ── Page configuration ────────────────────────────────────────
