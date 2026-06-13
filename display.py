@@ -210,7 +210,7 @@ def show_match_cards(team_data):
     Shows: opponent, date, venue, score, result badge,
     and key stats in a compact row.
     """
-    matches = team_data.get("matches", [])[:MATCHES_TO_ANALYZE]
+    matches = list(reversed(team_data.get("matches", [])[:MATCHES_TO_ANALYZE]))
 
     if not matches:
         st.info("No match data available.")

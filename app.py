@@ -78,13 +78,16 @@ if "team_b" not in st.session_state:
 
 # ── Sidebar navigation ────────────────────────────────────────
 
-# ── Sidebar navigation ────────────────────────────────────────
-
 with st.sidebar:
     st.title("⚽ WC 2026")
-    st.caption(f"Analyzing last {MATCHES_TO_ANALYZE} matches")
-
     st.divider()
+
+    # Search bar — primary navigation
+    search = st.text_input(
+        "Search team",
+        placeholder="🔍 Search any team...",
+        label_visibility="collapsed",
+    )
 
     page = st.radio(
         "Section",
@@ -96,25 +99,67 @@ with st.sidebar:
     st.divider()
 
     if page == "Team dashboard":
-        selected_group = st.selectbox(
-            "Group",
-            options=list(GROUPS.keys()),
-            format_func=lambda g: f"Group {g}",
-            key="selected_group",
+
+        # Search bar
+        search = st.text_input(
+            "Search team",
+            placeholder="Type team name...",
+            label_visibility="collapsed",
         )
 
-        group_teams = GROUPS[selected_group]
+        # Flatten all teams for search
+        all_team_names = sorted([t for teams in GROUPS.values() for t in teams])
 
-        # If current selected_team isn't in this group, reset it
-        if st.session_state.selected_team not in group_teams:
-            st.session_state.selected_team = group_teams[0]
+        if search:
+            # Filter teams matching search
+            matches_search = [
+                t for t in all_team_names
+                if search.lower() in t.lower()
+            ]
+            if matches_search:
+                selected_team = st.radio(
+                    "Results",
+                    options=matches_search,
+                    format_func=lambda t: f"{FLAGS.get(t,'🏳')} {t}",
+                    label_visibility="collapsed",
+                    key="search_result",
+                )
+                st.session_state.selected_team = selected_team
+                # Find and set the group
+                for g, teams in GROUPS.items():
+                    if selected_team in teams:
+                        st.session_state.selected_group = g
+                        break
+            else:
+                st.caption("No teams found")
 
-        selected_team = st.selectbox(
-            "Team",
-            options=group_teams,
-            format_func=lambda t: f"{FLAGS.get(t, '')} {t}",
-            key="selected_team",
-        )
+        else:
+            # Group selector
+            selected_group = st.selectbox(
+                "Group",
+                options=list(GROUPS.keys()),
+                format_func=lambda g: f"Group {g}",
+                key="selected_group",
+            )
+
+            # Team grid — show all teams in group as buttons
+            st.caption(f"Group {selected_group} teams")
+            group_teams = GROUPS[selected_group]
+
+            for team in group_teams:
+                has_data = team in all_teams
+                flag = FLAGS.get(team, "🏳")
+                is_selected = team == st.session_state.get("selected_team")
+
+                # Highlight selected team
+                label = f"{flag} {team} {'✓' if has_data else '—'}"
+                if st.button(
+                    label,
+                    key=f"team_btn_{team}",
+                    use_container_width=True,
+                    type="primary" if is_selected else "secondary",
+                ):
+                    st.session_state.selected_team = team
 
     elif page == "Compare teams":
         all_team_names = [t for teams in GROUPS.values() for t in teams]
@@ -154,6 +199,22 @@ current_page   = st.session_state.page
 current_team   = st.session_state.get("selected_team", "USA")
 current_team_a = st.session_state.get("team_a", "USA")
 current_team_b = st.session_state.get("team_b", "Paraguay")
+
+# ── Match count toggle ────────────────────────────────────────
+col_toggle, _ = st.columns([2, 6])
+with col_toggle:
+    match_count = st.radio(
+        "Analyze last",
+        options=[5, 10],
+        format_func=lambda x: f"Last {x} matches",
+        horizontal=True,
+        label_visibility="collapsed",
+        key="match_count",
+    )
+
+
+if current_page == "Team dashboard":
+    team_data = all_teams.get(current_team)
 
 if current_page == "Team dashboard":
     team_data = all_teams.get(current_team)

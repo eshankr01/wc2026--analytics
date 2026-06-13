@@ -2,7 +2,7 @@
   "meta": {
     "version": "1.0",
     "lastUpdated": "2026-06-13",
-    "teamsPopulated": ["USA", "Paraguay", "Australia"],
+    "teamsPopulated": ["USA", "Paraguay", "Australia", "Turkiye"],
     "notes": "Add teams by pasting a team object into the 'teams' array. The dashboard reads this file on load."
   },
   "groups": {
@@ -21,215 +21,570 @@
   },
 
   "teams": [
-    {
-      "name": "USA",
-      "flag": "🇺🇸",
-      "fifa": 16,
-      "manager": "Mauricio Pochettino",
-      "formation": "3-4-2-1",
-      "form": ["W", "L", "L", "W", "W"],
-      "formMatches": ["vs Senegal 3-2", "vs Portugal 0-2", "vs Belgium 2-5", "vs Uruguay 5-1", "vs Paraguay 2-1"],
-      "avg": {
-        "goals": 2.4, "goalsAgainst": 2.2, "xg": 1.25, "xgAgainst": 1.85,
-        "shots": 11.4, "shotsOnTarget": 5.2, "possession": "48%",
-        "passAccuracy": "84%", "passes": 436, "corners": 4.8,
-        "bigChances": 2.4, "fouls": 13.8, "saves": 2.2, "cleanSheets": "0/5",
-        "tackles": 13.0, "interceptions": 7.0, "duelsWon": 54, "aerialWon": "58%",
-        "shotConversion": "21%", "sotConversion": "46%"
-      },
-      "totals": {
-        "goals": 12, "goalsAgainst": 11, "shots": 57, "shotsOnTarget": 26,
-        "passes": 2180, "xg": 6.25, "bigChances": 12, "corners": 24,
-        "fouls": 69, "saves": 11, "tackles": 65, "interceptions": 35,
-        "duelsWon": 270, "yellowCards": 8, "redCards": 1
-      },
-      "matches": [
-        { "opp": "Senegal", "date": "May 31 2026", "venue": "H", "score": "3-2", "result": "W", "shots": 17, "sot": 5, "poss": "47%", "xg": 1.51, "ga": 2, "corners": 4, "passes": 303, "bigChances": 3 },
-        { "opp": "Portugal", "date": "Mar 31 2026", "venue": "H", "score": "0-2", "result": "L", "shots": 12, "sot": 3, "poss": "38%", "xg": 0.68, "ga": 2, "corners": 2, "passes": 430, "bigChances": 2 },
-        { "opp": "Belgium", "date": "Mar 28 2026", "venue": "H", "score": "2-5", "result": "L", "shots": 12, "sot": 5, "poss": "52%", "xg": 1.25, "ga": 5, "corners": 6, "passes": 461, "bigChances": 3 },
-        { "opp": "Uruguay", "date": "Nov 18 2025", "venue": "H", "score": "5-1", "result": "W", "shots": 10, "sot": 7, "poss": "48%", "xg": 1.51, "ga": 1, "corners": 7, "passes": null, "bigChances": 3 },
-        { "opp": "Paraguay", "date": "Nov 15 2025", "venue": "H", "score": "2-1", "result": "W", "shots": 8, "sot": 4, "poss": "56%", "xg": 1.11, "ga": 1, "corners": 5, "passes": 484, "bigChances": 3 }
-      ],
-      "players": [
-        { "name": "Folarin Balogun", "initials": "FB", "pos": "FWD", "club": "Monaco", "mins": 390, "rating": 7.4, "goals": 3, "shots": 9, "xg": 1.8, "keyPasses": 9, "passes": 120, "passAcc": "79%", "duels": 18, "tackles": 2, "bigChances": 4, "note": "3 goals in 5. Dangerous near-post finisher. 9 international goals total." },
-        { "name": "Christian Pulisic", "initials": "CP", "pos": "FWD", "club": "AC Milan", "mins": 410, "rating": 7.1, "goals": 2, "shots": 11, "xg": 1.6, "keyPasses": 9, "passes": 210, "passAcc": "83%", "duels": 22, "tackles": 3, "bigChances": 5, "note": "Ended 5-month goal drought vs Senegal. Primary creative threat." },
-        { "name": "Weston McKennie", "initials": "WM", "pos": "MID", "club": "Juventus", "mins": 380, "rating": 7.0, "goals": 1, "shots": 8, "xg": 0.9, "keyPasses": 7, "passes": 310, "passAcc": "84%", "duels": 28, "tackles": 9, "bigChances": 2, "note": "Scored vs Belgium. Pressing intensity with goalscoring runs from deep." },
-        { "name": "Tyler Adams", "initials": "TA", "pos": "MID", "club": "Bournemouth", "mins": 270, "rating": 7.2, "goals": 0, "shots": 2, "xg": 0.1, "keyPasses": 5, "passes": 290, "passAcc": "88%", "duels": 24, "tackles": 14, "bigChances": 0, "note": "Defensive anchor. Returned from injury in May. Controls USA press shape." },
-        { "name": "Antonee Robinson", "initials": "AR", "pos": "DEF", "club": "Fulham", "mins": 450, "rating": 7.0, "goals": 0, "shots": 3, "xg": 0.2, "keyPasses": 6, "passes": 340, "passAcc": "87%", "duels": 26, "tackles": 11, "bigChances": 1, "note": "Left wingback. Relentless overlapping runs. Assist vs Belgium." },
-        { "name": "Sergino Dest", "initials": "SD", "pos": "DEF", "club": "PSV", "mins": 380, "rating": 6.9, "goals": 0, "shots": 4, "xg": 0.3, "keyPasses": 5, "passes": 290, "passAcc": "85%", "duels": 24, "tackles": 9, "bigChances": 1, "note": "Right wingback. Attack-minded; creates overlap for Tillman and Pulisic." },
-        { "name": "Mark McKenzie", "initials": "MM", "pos": "DEF", "club": "Toulouse", "mins": 450, "rating": 6.8, "goals": 0, "shots": 2, "xg": 0.1, "keyPasses": 2, "passes": 310, "passAcc": "89%", "duels": 30, "tackles": 12, "bigChances": 0, "note": "Starting CB all 5 games. Strong aerially. Consistent defensive performer." },
-        { "name": "Matt Freese", "initials": "MF", "pos": "GK", "club": "NYCFC", "mins": 270, "rating": 6.9, "goals": 0, "shots": 0, "xg": 0, "keyPasses": 0, "passes": 110, "passAcc": "72%", "duels": 0, "tackles": 0, "bigChances": 0, "note": "WC starting GK. 6 saves in 3 matches. Key reflex stop vs Almirón." }
-      ],
-      "h2h": {
-        "opp": "Paraguay", "oppFlag": "🇵🇾", "date": "Nov 15 2025",
-        "score": "2-1", "venue": "Subaru Park, Chester PA", "winner": "USA",
-        "scorers": "Reyna 4', Balogun 84' | Almirón 71'",
-        "rows": [
-          { "metric": "Result", "left": "2-1 (W)", "right": "1-2 (L)", "highlight": true },
-          { "metric": "xG", "left": "1.11", "right": "0.70" },
-          { "metric": "xG on target", "left": "1.46", "right": "1.09" },
-          { "metric": "Possession", "left": "56%", "right": "44%" },
-          { "metric": "Total shots", "left": "8", "right": "8" },
-          { "metric": "Shots on target", "left": "4", "right": "3" },
-          { "metric": "Shots blocked", "left": "3", "right": "4" },
-          { "metric": "Shots in box", "left": "6", "right": "4" },
-          { "metric": "Big chances", "left": "3", "right": "1" },
-          { "metric": "Total passes", "left": "567", "right": "439" },
-          { "metric": "Passes completed", "left": "484", "right": "353" },
-          { "metric": "Pass accuracy", "left": "85%", "right": "80%" },
-          { "metric": "Key passes", "left": "5", "right": "4" },
-          { "metric": "Passes into final 3rd", "left": "109", "right": "40" },
-          { "metric": "Long balls completed", "left": "16/36 (44%)", "right": "36/67 (54%)" },
-          { "metric": "Corners", "left": "5", "right": "8" },
-          { "metric": "Fouls committed", "left": "11", "right": "13" },
-          { "metric": "Duels won", "left": "54", "right": "47" },
-          { "metric": "Aerial duels won", "left": "14/23 (61%)", "right": "9/23 (39%)" },
-          { "metric": "Tackles won", "left": "13/18 (72%)", "right": "14/22 (64%)" },
-          { "metric": "Interceptions", "left": "7", "right": "15" },
-          { "metric": "Clearances", "left": "23", "right": "29" },
-          { "metric": "GK saves", "left": "2", "right": "1" },
-          { "metric": "Yellow cards", "left": "3", "right": "3" },
-          { "metric": "Red cards", "left": "0", "right": "1" }
+      {
+        "name": "USA",
+        "flag": "🇺🇸",
+        "fifa": 16,
+        "manager": "Mauricio Pochettino",
+        "formation": "3-4-2-1",
+        "form": ["W", "L", "L", "W", "W", "W"],
+        "formMatches": [
+          "vs Paraguay 4-1 W (Jun 13 2026)",
+          "vs Senegal 3-2 W (May 31 2026)",
+          "vs Portugal 0-2 L (Mar 31 2026)",
+          "vs Belgium 2-5 L (Mar 28 2026)",
+          "vs Uruguay 5-1 W (Nov 18 2025)",
+          "vs Paraguay 2-1 W (Nov 15 2025)"
         ],
-        "insights": [
-          { "title": "USA aerial dominance", "body": "USA won 61% of aerial duels (14/23). Balogun vs G.Gómez is the key physical matchup on June 13." },
-          { "title": "Paraguay's defensive block", "body": "15 interceptions vs USA's 7. The 4-5-1 forced USA into long-range attempts — only 6 shots from inside the box." },
-          { "title": "Set-piece decided it", "body": "USA scored from a corner (Reyna 4'). Paraguay created 8 corners — their primary attacking route when pinned back." }
-        ]
-      }
-    },
-    {
-      "name": "Paraguay",
-      "flag": "🇵🇾",
-      "fifa": 32,
-      "manager": "Gustavo Alfaro",
-      "formation": "4-5-1",
-      "form": ["W", "L", "W", "W", "L"],
-      "formMatches": ["vs Nicaragua 4-0", "vs Morocco 1-2", "vs Greece 1-0", "vs Mexico 2-1", "vs USA 1-2"],
-      "avg": {
-        "goals": 1.8, "goalsAgainst": 1.0, "xg": 1.05, "xgAgainst": 1.12,
-        "shots": 11.4, "shotsOnTarget": 5.0, "possession": "39%",
-        "passAccuracy": "82%", "passes": 388, "corners": 5.2,
-        "bigChances": 2.2, "fouls": 16.0, "saves": 3.0, "cleanSheets": "1/5",
-        "tackles": 14.0, "interceptions": 13.0, "duelsWon": 48, "aerialWon": "49%",
-        "shotConversion": "16%", "sotConversion": "36%"
-      },
-      "totals": {
-        "goals": 9, "goalsAgainst": 5, "shots": 57, "shotsOnTarget": 25,
-        "passes": 1940, "xg": 5.25, "bigChances": 11, "corners": 26,
-        "fouls": 80, "saves": 15, "tackles": 70, "interceptions": 65,
-        "duelsWon": 240, "yellowCards": 7, "redCards": 1
-      },
-      "matches": [
-        { "opp": "Nicaragua", "date": "Jun 5 2026", "venue": "H", "score": "4-0", "result": "W", "shots": 17, "sot": 12, "poss": "72%", "xg": 1.44, "ga": 0, "corners": 14, "passes": null, "bigChances": 5 },
-        { "opp": "Morocco", "date": "Mar 31 2026", "venue": "A", "score": "1-2", "result": "L", "shots": 11, "sot": 4, "poss": "38%", "xg": 0.95, "ga": 2, "corners": 6, "passes": null, "bigChances": 2 },
-        { "opp": "Greece", "date": "Mar 27 2026", "venue": "A", "score": "1-0", "result": "W", "shots": 11, "sot": 3, "poss": "42%", "xg": 1.10, "ga": 0, "corners": 3, "passes": null, "bigChances": 2 },
-        { "opp": "Mexico", "date": "Nov 18 2025", "venue": "A", "score": "2-1", "result": "W", "shots": 14, "sot": 7, "poss": "28%", "xg": 1.20, "ga": 1, "corners": 3, "passes": null, "bigChances": 3 },
-        { "opp": "USA", "date": "Nov 15 2025", "venue": "A", "score": "1-2", "result": "L", "shots": 8, "sot": 3, "poss": "44%", "xg": 0.70, "ga": 2, "corners": 8, "passes": 353, "bigChances": 1 }
-      ],
-      "players": [
-        { "name": "Antonio Sanabria", "initials": "AS", "pos": "FWD", "club": "Torino", "mins": 360, "rating": 7.0, "goals": 2, "shots": 8, "xg": 1.2, "keyPasses": 3, "passes": 95, "passAcc": "74%", "duels": 22, "tackles": 4, "bigChances": 3, "note": "Physical target man. Scored vs Mexico. Leads Paraguay's press from the front." },
-        { "name": "Miguel Almirón", "initials": "MA", "pos": "FWD", "club": "Atlanta Utd", "mins": 380, "rating": 7.6, "goals": 2, "shots": 10, "xg": 1.1, "keyPasses": 11, "passes": 185, "passAcc": "79%", "duels": 28, "tackles": 5, "bigChances": 4, "note": "Primary creative threat. Direct runner. Scored vs Nicaragua. Key counter weapon." },
-        { "name": "Julio Enciso", "initials": "JE", "pos": "MID", "club": "Strasbourg", "mins": 210, "rating": 7.8, "goals": 1, "shots": 6, "xg": 0.8, "keyPasses": 8, "passes": 150, "passAcc": "81%", "duels": 18, "tackles": 4, "bigChances": 3, "injured": true, "note": "INJURED — likely out vs USA. Best creator in tight spaces. Major tactical loss." },
-        { "name": "Diego Gómez", "initials": "DG", "pos": "MID", "club": "Brighton", "mins": 400, "rating": 7.4, "goals": 1, "shots": 5, "xg": 0.6, "keyPasses": 12, "passes": 310, "passAcc": "86%", "duels": 26, "tackles": 8, "bigChances": 2, "note": "Scored winner vs Greece. Progressive passer — steps up with Enciso out." },
-        { "name": "Andrés Cubas", "initials": "AC", "pos": "MID", "club": "Nantes", "mins": 380, "rating": 6.8, "goals": 0, "shots": 2, "xg": 0.2, "keyPasses": 4, "passes": 260, "passAcc": "84%", "duels": 32, "tackles": 14, "bigChances": 0, "note": "Defensive mid. High-volume tackler. Anchors the 4-5-1 low block." },
-        { "name": "Gustavo Gómez", "initials": "GG", "pos": "DEF", "club": "Palmeiras", "mins": 450, "rating": 7.2, "goals": 0, "shots": 3, "xg": 0.2, "keyPasses": 2, "passes": 280, "passAcc": "88%", "duels": 35, "tackles": 13, "bigChances": 0, "note": "Captain. Sets Paraguay's defensive shape. Direct matchup with Balogun is decisive." },
-        { "name": "Junior Alonso", "initials": "JA", "pos": "DEF", "club": "Atlético MG", "mins": 400, "rating": 6.9, "goals": 0, "shots": 2, "xg": 0.1, "keyPasses": 1, "passes": 255, "passAcc": "87%", "duels": 30, "tackles": 11, "bigChances": 0, "note": "Aggressive left-side CB. Blocks and clearances leader. Recovered from Greece knock." },
-        { "name": "R. Fernández / O. Gill", "initials": "GK", "pos": "GK", "club": "Various", "mins": 450, "rating": 6.7, "goals": 0, "shots": 0, "xg": 0, "keyPasses": 0, "passes": 120, "passAcc": "68%", "duels": 0, "tackles": 0, "bigChances": 0, "note": "15 saves across 5 games. Fernández started vs Nicaragua; Gill started other 4." }
-      ],
-      "h2h": {
-        "opp": "USA", "oppFlag": "🇺🇸", "date": "Nov 15 2025",
-        "score": "1-2", "venue": "Subaru Park, Chester PA", "winner": "USA",
-        "scorers": "Almirón 71' | Reyna 4', Balogun 84'",
-        "rows": [
-          { "metric": "Result", "left": "1-2 (L)", "right": "2-1 (W)", "highlight": true },
-          { "metric": "xG", "left": "0.70", "right": "1.11" },
-          { "metric": "Possession", "left": "44%", "right": "56%" },
-          { "metric": "Total shots", "left": "8", "right": "8" },
-          { "metric": "Shots on target", "left": "3", "right": "4" },
-          { "metric": "Big chances", "left": "1", "right": "3" },
-          { "metric": "Total passes", "left": "439", "right": "567" },
-          { "metric": "Passes completed", "left": "353", "right": "484" },
-          { "metric": "Pass accuracy", "left": "80%", "right": "85%" },
-          { "metric": "Corners", "left": "8", "right": "5" },
-          { "metric": "Interceptions", "left": "15", "right": "7" },
-          { "metric": "Clearances", "left": "29", "right": "23" },
-          { "metric": "Duels won", "left": "47", "right": "54" },
-          { "metric": "Aerial duels won", "left": "9/23 (39%)", "right": "14/23 (61%)" },
-          { "metric": "Tackles won", "left": "14/22", "right": "13/18" },
-          { "metric": "GK saves", "left": "1", "right": "2" },
-          { "metric": "Yellow cards", "left": "3", "right": "3" },
-          { "metric": "Red cards", "left": "1", "right": "0" }
+        "avg": {
+          "goals": 2.67, "goalsAgainst": 2.0, "xg": 1.35, "xgAgainst": 1.72,
+          "shots": 12.0, "shotsOnTarget": 5.5, "possession": "48%",
+          "passAccuracy": "84%", "passes": 440, "corners": 4.8,
+          "bigChances": 2.7, "fouls": 13.5, "saves": 2.2, "cleanSheets": "0/6",
+          "tackles": 13.0, "interceptions": 7.5, "duelsWon": 54, "aerialWon": "58%",
+          "shotConversion": "22%", "sotConversion": "48%"
+        },
+        "totals": {
+          "goals": 16, "goalsAgainst": 12, "shots": 72, "shotsOnTarget": 33,
+          "passes": 2640, "xg": 8.1, "bigChances": 16, "corners": 29,
+          "fouls": 81, "saves": 13, "tackles": 78, "interceptions": 45,
+          "duelsWon": 324, "yellowCards": 9, "redCards": 1
+        },
+        "matches": [
+          { "opp": "Paraguay", "date": "Nov 15 2025", "venue": "H", "score": "2-1", "result": "W", "shots": 8, "sot": 4, "poss": "56%", "xg": 1.11, "ga": 1, "corners": 5, "passes": 484, "bigChances": 3 },
+          { "opp": "Uruguay", "date": "Nov 18 2025", "venue": "H", "score": "5-1", "result": "W", "shots": 10, "sot": 7, "poss": "48%", "xg": 1.51, "ga": 1, "corners": 7, "passes": null, "bigChances": 3 },
+          { "opp": "Belgium", "date": "Mar 28 2026", "venue": "H", "score": "2-5", "result": "L", "shots": 12, "sot": 5, "poss": "52%", "xg": 1.25, "ga": 5, "corners": 6, "passes": 461, "bigChances": 3 },
+          { "opp": "Portugal", "date": "Mar 31 2026", "venue": "H", "score": "0-2", "result": "L", "shots": 12, "sot": 3, "poss": "38%", "xg": 0.68, "ga": 2, "corners": 2, "passes": 430, "bigChances": 2 },
+          { "opp": "Senegal", "date": "May 31 2026", "venue": "H", "score": "3-2", "result": "W", "shots": 17, "sot": 5, "poss": "47%", "xg": 1.51, "ga": 2, "corners": 4, "passes": 303, "bigChances": 3 },
+          { "opp": "Paraguay", "date": "Jun 13 2026", "venue": "H", "score": "4-1", "result": "W", "shots": 16, "sot": 9, "poss": "59%", "xg": 1.85, "ga": 1, "corners": 6, "passes": 502, "bigChances": 4 }
         ],
-        "insights": [
-          { "title": "Counter-press created 8 corners", "body": "Paraguay's pressure created 8 corners — primary attack route when pinned back by USA's possession." },
-          { "title": "Outclassed aerially", "body": "9/23 aerial duels won vs USA's 14/23. Direct balls into Balogun were hard to defend." },
-          { "title": "Interception superiority", "body": "15 interceptions vs 7 — the 4-5-1 block disrupted USA's build-up effectively despite the loss." }
-        ]
-      }
-    },
-    {
-      "name": "Australia",
-      "flag": "🇦🇺",
-      "fifa": 27,
-      "manager": "Tony Popovic",
-      "formation": "3-4-2-1",
-      "form": ["D", "L", "W", "W", "W"],
-      "formMatches": ["vs Switzerland 1-1", "vs Mexico 0-1", "vs Curacao 5-1", "vs Cameroon 1-0", "vs Japan 1-0"],
-      "avg": {
-        "goals": 1.6, "goalsAgainst": 0.8, "xg": 1.18, "xgAgainst": 0.92,
-        "shots": 9.0, "shotsOnTarget": 3.6, "possession": "44%",
-        "passAccuracy": "86%", "passes": 458, "corners": 3.0,
-        "bigChances": 1.8, "fouls": 9.0, "saves": 2.0, "cleanSheets": "2/5",
-        "tackles": 15.0, "interceptions": 10.0, "duelsWon": 46, "aerialWon": "54%",
-        "shotConversion": "18%", "sotConversion": "44%"
-      },
-      "totals": {
-        "goals": 8, "goalsAgainst": 4, "shots": 45, "shotsOnTarget": 18,
-        "passes": 2290, "xg": 5.9, "bigChances": 9, "corners": 15,
-        "fouls": 45, "saves": 10, "tackles": 75, "interceptions": 50,
-        "duelsWon": 230, "yellowCards": 7, "redCards": 0
-      },
-      "matches": [
-        { "opp": "Switzerland", "date": "Jun 6 2026", "venue": "N", "score": "1-1", "result": "D", "shots": 4, "sot": 2, "poss": "37%", "xg": 0.80, "ga": 1, "corners": 2, "passes": 418, "bigChances": 1 },
-        { "opp": "Mexico", "date": "May 30 2026", "venue": "A", "score": "0-1", "result": "L", "shots": 7, "sot": 2, "poss": "42%", "xg": 0.75, "ga": 1, "corners": 4, "passes": null, "bigChances": 1 },
-        { "opp": "Curacao", "date": "Mar 31 2026", "venue": "H", "score": "5-1", "result": "W", "shots": 11, "sot": 6, "poss": "47%", "xg": 2.10, "ga": 1, "corners": 1, "passes": null, "bigChances": 4 },
-        { "opp": "Cameroon", "date": "Mar 27 2026", "venue": "H", "score": "1-0", "result": "W", "shots": 8, "sot": 4, "poss": "57%", "xg": 0.95, "ga": 0, "corners": 3, "passes": null, "bigChances": 2 },
-        { "opp": "Japan", "date": "Jun 5 2025", "venue": "H", "score": "1-0", "result": "W", "shots": 12, "sot": 4, "poss": "38%", "xg": 1.26, "ga": 0, "corners": 7, "passes": null, "bigChances": 2 }
-      ],
-      "players": [
-        { "name": "Nestory Irankunda", "initials": "NI", "pos": "FWD", "club": "Watford", "mins": 310, "rating": 7.8, "goals": 3, "shots": 8, "xg": 1.4, "keyPasses": 7, "passes": 120, "passAcc": "78%", "duels": 22, "tackles": 2, "bigChances": 3, "note": "20-year-old star. 2 goals vs Curacao. Explosive pace — most exciting AUS attacker in years." },
-        { "name": "Mohamed Toure", "initials": "MT", "pos": "FWD", "club": "Norwich City", "mins": 280, "rating": 7.0, "goals": 1, "shots": 7, "xg": 0.9, "keyPasses": 5, "passes": 95, "passAcc": "75%", "duels": 20, "tackles": 3, "bigChances": 2, "note": "10 goals in 12 Norwich games in 25/26. Debut WC. Explosive finisher, strong in transitions." },
-        { "name": "Awer Mabil", "initials": "AM", "pos": "FWD", "club": "Castellón", "mins": 260, "rating": 7.1, "goals": 1, "shots": 6, "xg": 0.8, "keyPasses": 6, "passes": 110, "passAcc": "77%", "duels": 18, "tackles": 2, "bigChances": 2, "note": "Scored vs Curacao — his 10th international goal, first since Mar 2023. Dangerous wide left." },
-        { "name": "Jackson Irvine", "initials": "JI", "pos": "MID", "club": "St Pauli", "mins": 340, "rating": 7.0, "goals": 1, "shots": 5, "xg": 0.5, "keyPasses": 6, "passes": 280, "passAcc": "85%", "duels": 28, "tackles": 10, "bigChances": 1, "note": "Third WC. Sets tempo, combines defensive discipline with technical quality." },
-        { "name": "Aiden O'Neill", "initials": "AO", "pos": "MID", "club": "NYCFC", "mins": 380, "rating": 6.9, "goals": 0, "shots": 3, "xg": 0.2, "keyPasses": 5, "passes": 310, "passAcc": "87%", "duels": 24, "tackles": 11, "bigChances": 0, "note": "Midfield engine. Covers enormous ground. Key pressing trigger in Popovic's system." },
-        { "name": "Jordan Bos", "initials": "JB", "pos": "DEF", "club": "Feyenoord", "mins": 360, "rating": 7.3, "goals": 2, "shots": 5, "xg": 0.9, "keyPasses": 7, "passes": 270, "passAcc": "84%", "duels": 22, "tackles": 9, "bigChances": 2, "note": "Left wingback. Scored late winner vs Cameroon + goal vs Curacao. 14 international goals." },
-        { "name": "Harry Souttar", "initials": "HS", "pos": "DEF", "club": "Leicester City", "mins": 270, "rating": 7.1, "goals": 0, "shots": 2, "xg": 0.2, "keyPasses": 1, "passes": 220, "passAcc": "88%", "duels": 28, "tackles": 12, "bigChances": 0, "note": "Twice recovered from major injury. Aerial colossus — dominant set-piece defender." },
-        { "name": "Alessandro Circati", "initials": "AC", "pos": "DEF", "club": "Parma", "mins": 390, "rating": 7.0, "goals": 1, "shots": 3, "xg": 0.3, "keyPasses": 1, "passes": 250, "passAcc": "89%", "duels": 26, "tackles": 11, "bigChances": 0, "note": "Scored headed goal vs Curacao. Emerged as key player across both March friendlies." },
-        { "name": "Mathew Ryan", "initials": "MR", "pos": "GK", "club": "Levante", "mins": 360, "rating": 7.1, "goals": 0, "shots": 0, "xg": 0, "keyPasses": 0, "passes": 180, "passAcc": "74%", "duels": 0, "tackles": 0, "bigChances": 0, "note": "Captain. 4th World Cup. Denied Alexis Vega brilliantly vs Mexico. Still elite at 35." }
-      ],
-      "h2h": {
-        "opp": "USA", "oppFlag": "🇺🇸", "date": "Oct 15 2025",
-        "score": "1-2", "venue": "Lumen Field, Seattle", "winner": "USA",
-        "scorers": "Irvine 55' | Pulisic 12', Balogun 78'",
-        "rows": [
-          { "metric": "Result", "left": "1-2 (L)", "right": "2-1 (W)", "highlight": true },
-          { "metric": "Possession", "left": "43%", "right": "57%" },
-          { "metric": "Total shots", "left": "8", "right": "14" },
-          { "metric": "Shots on target", "left": "3", "right": "5" },
-          { "metric": "xG", "left": "0.82", "right": "1.35" },
-          { "metric": "Big chances", "left": "1", "right": "3" },
-          { "metric": "Corners", "left": "3", "right": "6" },
-          { "metric": "Fouls committed", "left": "12", "right": "10" },
-          { "metric": "GK saves", "left": "3", "right": "2" },
-          { "metric": "Yellow cards", "left": "2", "right": "1" }
+        "players": [
+          {
+            "name": "Folarin Balogun", "initials": "FB", "pos": "FWD", "club": "Monaco",
+            "nationality": "USA", "mins": 480, "rating": 7.6, "injured": false,
+            "goals": 5, "assists": 1, "shots": 14, "sot": 7, "xg": 2.1, "xA": 0.4,
+            "chancesCreated": 5, "successfulDribbles": 4, "duelsWon": 22, "duelsTotal": 34,
+            "tackles": 2, "interceptions": 1, "blocks": 0,
+            "passAcc": 77, "keyPasses": 5, "passes": 145,
+            "note": "5 goals in 6 games including 2 vs Paraguay today. Arrived at the World Cup as the most feared finisher in the squad."
+          },
+          {
+            "name": "Christian Pulisic", "initials": "CP", "pos": "FWD", "club": "AC Milan",
+            "nationality": "USA", "mins": 490, "rating": 7.2, "injured": false,
+            "goals": 2, "assists": 3, "shots": 13, "sot": 6, "xg": 1.6, "xA": 1.1,
+            "chancesCreated": 11, "successfulDribbles": 7, "duelsWon": 24, "duelsTotal": 38,
+            "tackles": 3, "interceptions": 2, "blocks": 0,
+            "passAcc": 83, "keyPasses": 11, "passes": 248,
+            "note": "Back to his best — goal and two assists vs Paraguay. Highest chance creator in the squad."
+          },
+          {
+            "name": "Malik Tillman", "initials": "MT", "pos": "FWD", "club": "PSV",
+            "nationality": "USA", "mins": 280, "rating": 7.1, "injured": false,
+            "goals": 1, "assists": 2, "shots": 7, "sot": 3, "xg": 0.8, "xA": 0.6,
+            "chancesCreated": 6, "successfulDribbles": 5, "duelsWon": 14, "duelsTotal": 22,
+            "tackles": 2, "interceptions": 1, "blocks": 0,
+            "passAcc": 81, "keyPasses": 6, "passes": 138,
+            "note": "Excellent vs Paraguay — fancy flicks, well-timed passes, assist on third goal."
+          },
+          {
+            "name": "Weston McKennie", "initials": "WM", "pos": "MID", "club": "Juventus",
+            "nationality": "USA", "mins": 450, "rating": 7.3, "injured": false,
+            "goals": 2, "assists": 2, "shots": 9, "sot": 4, "xg": 1.0, "xA": 0.7,
+            "chancesCreated": 8, "successfulDribbles": 3, "duelsWon": 30, "duelsTotal": 46,
+            "tackles": 11, "interceptions": 6, "blocks": 2,
+            "passAcc": 84, "keyPasses": 8, "passes": 365,
+            "note": "9 goals and 8 assists for Juventus this season. Set-piece threat, box-to-box engine."
+          },
+          {
+            "name": "Tyler Adams", "initials": "TA", "pos": "MID", "club": "Bournemouth",
+            "nationality": "USA", "mins": 360, "rating": 7.1, "injured": false,
+            "goals": 0, "assists": 1, "shots": 2, "sot": 1, "xg": 0.1, "xA": 0.3,
+            "chancesCreated": 5, "successfulDribbles": 2, "duelsWon": 28, "duelsTotal": 42,
+            "tackles": 16, "interceptions": 9, "blocks": 3,
+            "passAcc": 88, "keyPasses": 5, "passes": 340,
+            "note": "Defensive anchor and press trigger. Adams fit = USA defence organised."
+          },
+          {
+            "name": "Antonee Robinson", "initials": "AR", "pos": "DEF", "club": "Fulham",
+            "nationality": "USA", "mins": 540, "rating": 7.0, "injured": false,
+            "goals": 0, "assists": 2, "shots": 4, "sot": 1, "xg": 0.2, "xA": 0.5,
+            "chancesCreated": 7, "successfulDribbles": 8, "duelsWon": 30, "duelsTotal": 46,
+            "tackles": 13, "interceptions": 5, "blocks": 2,
+            "passAcc": 87, "keyPasses": 7, "passes": 402,
+            "note": "Left wingback with relentless overlapping runs. Through balls and 1v1 wins a constant threat."
+          },
+          {
+            "name": "Sergino Dest", "initials": "SD", "pos": "DEF", "club": "PSV",
+            "nationality": "USA", "mins": 420, "rating": 6.8, "injured": false,
+            "goals": 1, "assists": 1, "shots": 5, "sot": 2, "xg": 0.4, "xA": 0.3,
+            "chancesCreated": 5, "successfulDribbles": 6, "duelsWon": 22, "duelsTotal": 36,
+            "tackles": 9, "interceptions": 4, "blocks": 1,
+            "passAcc": 85, "keyPasses": 5, "passes": 318,
+            "note": "Right wingback. Scored vs Paraguay. Creates overlap channel for Tillman and Pulisic."
+          },
+          {
+            "name": "Mark McKenzie", "initials": "MM", "pos": "DEF", "club": "Toulouse",
+            "nationality": "USA", "mins": 540, "rating": 6.9, "injured": false,
+            "goals": 0, "assists": 0, "shots": 2, "sot": 0, "xg": 0.1, "xA": 0.0,
+            "chancesCreated": 1, "successfulDribbles": 0, "duelsWon": 34, "duelsTotal": 52,
+            "tackles": 14, "interceptions": 7, "blocks": 4,
+            "passAcc": 89, "keyPasses": 2, "passes": 368,
+            "note": "Starting CB all 6 games. Dominant aerially — 65% aerial duel win rate across window."
+          },
+          {
+            "name": "Matt Freese", "initials": "MF", "pos": "GK", "club": "NYCFC",
+            "nationality": "USA", "mins": 360, "rating": 7.0, "injured": false,
+            "goals": 0, "assists": 0, "shots": 0, "sot": 0, "xg": 0.0, "xA": 0.0,
+            "chancesCreated": 0, "successfulDribbles": 0, "duelsWon": 0, "duelsTotal": 0,
+            "tackles": 0, "interceptions": 0, "blocks": 0,
+            "passAcc": 72, "keyPasses": 0, "passes": 132,
+            "note": "WC starting GK. 8 saves across 4 matches. Key reflex stop vs Almirón in Nov H2H."
+          }
         ],
-        "insights": [
-          { "title": "USA home advantage is real", "body": "USA won their 3rd straight friendly vs Australia, all on US soil. The June 19 WC match is at Lumen Field — same venue." },
-          { "title": "Irankunda changes the equation", "body": "He wasn't in the lineup for the Oct match. His addition to the WC squad could significantly change Australia's attacking threat." },
-          { "title": "Australia defend well but lack cutting edge", "body": "3 shots on target, 1 big chance — competitive but USA's quality gap in attack is hard to bridge without more clinical finishing." }
-        ]
+        "h2h": {
+          "opp": "Paraguay", "oppFlag": "🇵🇾", "date": "Nov 15 2025",
+          "score": "2-1", "venue": "Subaru Park, Chester PA", "winner": "USA",
+          "scorers": "Reyna 4', Balogun 84' | Almirón 71'",
+          "rows": [
+            { "metric": "Result", "left": "2-1 (W)", "right": "1-2 (L)", "highlight": true },
+            { "metric": "xG", "left": "1.11", "right": "0.70" },
+            { "metric": "Possession", "left": "56%", "right": "44%" },
+            { "metric": "Total shots", "left": "8", "right": "8" },
+            { "metric": "Shots on target", "left": "4", "right": "3" },
+            { "metric": "Big chances", "left": "3", "right": "1" },
+            { "metric": "Total passes", "left": "567", "right": "439" },
+            { "metric": "Pass accuracy", "left": "85%", "right": "80%" },
+            { "metric": "Key passes", "left": "5", "right": "4" },
+            { "metric": "Corners", "left": "5", "right": "8" },
+            { "metric": "Duels won", "left": "54", "right": "47" },
+            { "metric": "Aerial duels won", "left": "14/23 (61%)", "right": "9/23 (39%)" },
+            { "metric": "Tackles won", "left": "13/18", "right": "14/22" },
+            { "metric": "Interceptions", "left": "7", "right": "15" },
+            { "metric": "Clearances", "left": "23", "right": "29" },
+            { "metric": "GK saves", "left": "2", "right": "1" },
+            { "metric": "Yellow cards", "left": "3", "right": "3" },
+            { "metric": "Red cards", "left": "0", "right": "1" }
+          ],
+          "insights": [
+            { "title": "USA aerial dominance", "body": "USA won 61% of aerial duels (14/23). Balogun vs G.Gómez is the key physical matchup." },
+            { "title": "Paraguay defensive block", "body": "15 interceptions vs USA's 7. The 4-5-1 forced USA into long-range attempts." },
+            { "title": "Set-piece decided it", "body": "USA scored from a corner (Reyna 4'). Paraguay created 8 corners — their primary route." }
+          ]
+        }
+      },
+      {
+        "name": "Paraguay",
+        "flag": "🇵🇾",
+        "fifa": 32,
+        "manager": "Gustavo Alfaro",
+        "formation": "4-5-1",
+        "form": ["L", "W", "L", "W", "W", "L"],
+        "formMatches": [
+          "vs USA 1-4 L (Jun 13 2026)",
+          "vs Nicaragua 4-0 W (Jun 5 2026)",
+          "vs Morocco 1-2 L (Mar 31 2026)",
+          "vs Greece 1-0 W (Mar 27 2026)",
+          "vs Mexico 2-1 W (Nov 18 2025)",
+          "vs USA 1-2 L (Nov 15 2025)"
+        ],
+        "avg": {
+          "goals": 1.67, "goalsAgainst": 1.33, "xg": 0.99, "xgAgainst": 1.28,
+          "shots": 10.8, "shotsOnTarget": 4.8, "possession": "41%",
+          "passAccuracy": "81%", "passes": 375, "corners": 5.5,
+          "bigChances": 2.0, "fouls": 15.8, "saves": 3.2, "cleanSheets": "1/6",
+          "tackles": 14.2, "interceptions": 13.5, "duelsWon": 46, "aerialWon": "47%",
+          "shotConversion": "15%", "sotConversion": "35%"
+        },
+        "totals": {
+          "goals": 10, "goalsAgainst": 8, "shots": 65, "shotsOnTarget": 29,
+          "passes": 2250, "xg": 5.94, "bigChances": 12, "corners": 33,
+          "fouls": 95, "saves": 19, "tackles": 85, "interceptions": 81,
+          "duelsWon": 276, "yellowCards": 9, "redCards": 1
+        },
+        "matches": [
+          { "opp": "USA", "date": "Nov 15 2025", "venue": "A", "score": "1-2", "result": "L", "shots": 8, "sot": 3, "poss": "44%", "xg": 0.70, "ga": 2, "corners": 8, "passes": 353, "bigChances": 1 },
+          { "opp": "Mexico", "date": "Nov 18 2025", "venue": "A", "score": "2-1", "result": "W", "shots": 14, "sot": 7, "poss": "28%", "xg": 1.20, "ga": 1, "corners": 3, "passes": null, "bigChances": 3 },
+          { "opp": "Greece", "date": "Mar 27 2026", "venue": "A", "score": "1-0", "result": "W", "shots": 11, "sot": 3, "poss": "42%", "xg": 1.10, "ga": 0, "corners": 3, "passes": null, "bigChances": 2 },
+          { "opp": "Morocco", "date": "Mar 31 2026", "venue": "A", "score": "1-2", "result": "L", "shots": 11, "sot": 4, "poss": "38%", "xg": 0.95, "ga": 2, "corners": 6, "passes": null, "bigChances": 2 },
+          { "opp": "Nicaragua", "date": "Jun 5 2026", "venue": "H", "score": "4-0", "result": "W", "shots": 17, "sot": 12, "poss": "72%", "xg": 1.44, "ga": 0, "corners": 14, "passes": null, "bigChances": 5 },
+          { "opp": "USA", "date": "Jun 13 2026", "venue": "N", "score": "1-4", "result": "L", "shots": 9, "sot": 3, "poss": "41%", "xg": 0.55, "ga": 4, "corners": 4, "passes": null, "bigChances": 1 }
+        ],
+        "players": [
+          {
+            "name": "Antonio Sanabria", "initials": "AS", "pos": "FWD", "club": "Torino",
+            "nationality": "Paraguay", "mins": 420, "rating": 6.9, "injured": false,
+            "goals": 2, "assists": 1, "shots": 9, "sot": 4, "xg": 1.2, "xA": 0.3,
+            "chancesCreated": 4, "successfulDribbles": 2, "duelsWon": 24, "duelsTotal": 40,
+            "tackles": 4, "interceptions": 1, "blocks": 0,
+            "passAcc": 74, "keyPasses": 4, "passes": 105,
+            "note": "Physical target man. Scored vs Mexico. Leads press from the front, strong in aerial duels."
+          },
+          {
+            "name": "Miguel Almirón", "initials": "MA", "pos": "FWD", "club": "Atlanta Utd",
+            "nationality": "Paraguay", "mins": 450, "rating": 7.3, "injured": false,
+            "goals": 2, "assists": 1, "shots": 11, "sot": 5, "xg": 1.1, "xA": 0.5,
+            "chancesCreated": 12, "successfulDribbles": 9, "duelsWon": 30, "duelsTotal": 48,
+            "tackles": 5, "interceptions": 3, "blocks": 0,
+            "passAcc": 79, "keyPasses": 12, "passes": 210,
+            "note": "Paraguay's primary creative threat. Direct runner, dangerous on counter. Top dribbler in squad."
+          },
+          {
+            "name": "Julio Enciso", "initials": "JE", "pos": "MID", "club": "Strasbourg",
+            "nationality": "Paraguay", "mins": 210, "rating": 7.8, "injured": true,
+            "goals": 1, "assists": 1, "shots": 6, "sot": 3, "xg": 0.8, "xA": 0.4,
+            "chancesCreated": 8, "successfulDribbles": 6, "duelsWon": 18, "duelsTotal": 28,
+            "tackles": 4, "interceptions": 2, "blocks": 0,
+            "passAcc": 81, "keyPasses": 8, "passes": 155,
+            "note": "INJURED — missed WC opener vs USA. Best creator in tight spaces. Major tactical loss."
+          },
+          {
+            "name": "Diego Gómez", "initials": "DG", "pos": "MID", "club": "Brighton",
+            "nationality": "Paraguay", "mins": 480, "rating": 7.2, "injured": false,
+            "goals": 1, "assists": 1, "shots": 5, "sot": 2, "xg": 0.6, "xA": 0.4,
+            "chancesCreated": 13, "successfulDribbles": 4, "duelsWon": 28, "duelsTotal": 44,
+            "tackles": 9, "interceptions": 8, "blocks": 1,
+            "passAcc": 86, "keyPasses": 13, "passes": 362,
+            "note": "Scored winner vs Greece. Steps up as primary creator with Enciso out."
+          },
+          {
+            "name": "Andrés Cubas", "initials": "AC", "pos": "MID", "club": "Nantes",
+            "nationality": "Paraguay", "mins": 450, "rating": 6.8, "injured": false,
+            "goals": 0, "assists": 0, "shots": 2, "sot": 1, "xg": 0.2, "xA": 0.1,
+            "chancesCreated": 4, "successfulDribbles": 1, "duelsWon": 36, "duelsTotal": 56,
+            "tackles": 16, "interceptions": 14, "blocks": 3,
+            "passAcc": 84, "keyPasses": 4, "passes": 295,
+            "note": "Defensive mid. High-volume tackler. Anchors the 4-5-1 low block."
+          },
+          {
+            "name": "Gustavo Gómez", "initials": "GG", "pos": "DEF", "club": "Palmeiras",
+            "nationality": "Paraguay", "mins": 540, "rating": 7.1, "injured": false,
+            "goals": 0, "assists": 0, "shots": 3, "sot": 1, "xg": 0.2, "xA": 0.0,
+            "chancesCreated": 2, "successfulDribbles": 0, "duelsWon": 38, "duelsTotal": 58,
+            "tackles": 14, "interceptions": 10, "blocks": 5,
+            "passAcc": 88, "keyPasses": 2, "passes": 322,
+            "note": "Captain. Sets Paraguay's defensive shape. Dominant aerially."
+          },
+          {
+            "name": "Junior Alonso", "initials": "JA", "pos": "DEF", "club": "Atlético MG",
+            "nationality": "Paraguay", "mins": 480, "rating": 6.8, "injured": false,
+            "goals": 0, "assists": 0, "shots": 2, "sot": 0, "xg": 0.1, "xA": 0.0,
+            "chancesCreated": 1, "successfulDribbles": 0, "duelsWon": 32, "duelsTotal": 52,
+            "tackles": 12, "interceptions": 9, "blocks": 4,
+            "passAcc": 87, "keyPasses": 1, "passes": 290,
+            "note": "Left-side CB. Blocks and clearances leader. Aggressive in duels."
+          },
+          {
+            "name": "Rodrigo Fernández", "initials": "RF", "pos": "GK", "club": "Independiente",
+            "nationality": "Paraguay", "mins": 540, "rating": 6.8, "injured": false,
+            "goals": 0, "assists": 0, "shots": 0, "sot": 0, "xg": 0.0, "xA": 0.0,
+            "chancesCreated": 0, "successfulDribbles": 0, "duelsWon": 0, "duelsTotal": 0,
+            "tackles": 0, "interceptions": 0, "blocks": 0,
+            "passAcc": 68, "keyPasses": 0, "passes": 142,
+            "note": "19 saves across 6 matches. Busiest GK in this sample. Solid vs Nicaragua."
+          }
+        ],
+        "h2h": {
+          "opp": "USA", "oppFlag": "🇺🇸", "date": "Nov 15 2025",
+          "score": "1-2", "venue": "Subaru Park, Chester PA", "winner": "USA",
+          "scorers": "Almirón 71' | Reyna 4', Balogun 84'",
+          "rows": [
+            { "metric": "Result", "left": "1-2 (L)", "right": "2-1 (W)", "highlight": true },
+            { "metric": "xG", "left": "0.70", "right": "1.11" },
+            { "metric": "Possession", "left": "44%", "right": "56%" },
+            { "metric": "Total shots", "left": "8", "right": "8" },
+            { "metric": "Shots on target", "left": "3", "right": "4" },
+            { "metric": "Big chances", "left": "1", "right": "3" },
+            { "metric": "Total passes", "left": "439", "right": "567" },
+            { "metric": "Pass accuracy", "left": "80%", "right": "85%" },
+            { "metric": "Corners", "left": "8", "right": "5" },
+            { "metric": "Interceptions", "left": "15", "right": "7" },
+            { "metric": "Clearances", "left": "29", "right": "23" },
+            { "metric": "Duels won", "left": "47", "right": "54" },
+            { "metric": "Aerial duels won", "left": "9/23 (39%)", "right": "14/23 (61%)" },
+            { "metric": "GK saves", "left": "1", "right": "2" },
+            { "metric": "Yellow cards", "left": "3", "right": "3" },
+            { "metric": "Red cards", "left": "1", "right": "0" }
+          ],
+          "insights": [
+            { "title": "Counter-press created 8 corners", "body": "Paraguay's pressure created 8 corners — primary attack route when pinned back." },
+            { "title": "Outclassed aerially", "body": "9/23 aerial duels won vs USA's 14/23. Direct balls into Balogun hard to defend." },
+            { "title": "Interception superiority", "body": "15 interceptions vs 7 — the 4-5-1 block disrupted USA build-up despite the loss." }
+          ]
+        }
+      },
+      {
+        "name": "Australia",
+        "flag": "🇦🇺",
+        "fifa": 27,
+        "manager": "Tony Popovic",
+        "formation": "3-4-2-1",
+        "form": ["D", "L", "W", "W", "W"],
+        "formMatches": [
+          "vs Switzerland 1-1 D (Jun 6 2026)",
+          "vs Mexico 0-1 L (May 30 2026)",
+          "vs Curacao 5-1 W (Mar 31 2026)",
+          "vs Cameroon 1-0 W (Mar 27 2026)",
+          "vs Japan 1-0 W (Jun 5 2025)"
+        ],
+        "avg": {
+          "goals": 1.6, "goalsAgainst": 0.8, "xg": 1.18, "xgAgainst": 0.92,
+          "shots": 9.0, "shotsOnTarget": 3.6, "possession": "44%",
+          "passAccuracy": "86%", "passes": 458, "corners": 3.0,
+          "bigChances": 1.8, "fouls": 9.0, "saves": 2.0, "cleanSheets": "2/5",
+          "tackles": 15.0, "interceptions": 10.0, "duelsWon": 46, "aerialWon": "54%",
+          "shotConversion": "18%", "sotConversion": "44%"
+        },
+        "totals": {
+          "goals": 8, "goalsAgainst": 4, "shots": 45, "shotsOnTarget": 18,
+          "passes": 2290, "xg": 5.9, "bigChances": 9, "corners": 15,
+          "fouls": 45, "saves": 10, "tackles": 75, "interceptions": 50,
+          "duelsWon": 230, "yellowCards": 7, "redCards": 0
+        },
+        "matches": [
+          { "opp": "Japan", "date": "Jun 5 2025", "venue": "H", "score": "1-0", "result": "W", "shots": 12, "sot": 4, "poss": "38%", "xg": 1.26, "ga": 0, "corners": 7, "passes": null, "bigChances": 2 },
+          { "opp": "Cameroon", "date": "Mar 27 2026", "venue": "H", "score": "1-0", "result": "W", "shots": 8, "sot": 4, "poss": "57%", "xg": 0.95, "ga": 0, "corners": 3, "passes": null, "bigChances": 2 },
+          { "opp": "Curacao", "date": "Mar 31 2026", "venue": "H", "score": "5-1", "result": "W", "shots": 11, "sot": 6, "poss": "47%", "xg": 2.10, "ga": 1, "corners": 1, "passes": null, "bigChances": 4 },
+          { "opp": "Mexico", "date": "May 30 2026", "venue": "A", "score": "0-1", "result": "L", "shots": 7, "sot": 2, "poss": "42%", "xg": 0.75, "ga": 1, "corners": 4, "passes": null, "bigChances": 1 },
+          { "opp": "Switzerland", "date": "Jun 6 2026", "venue": "N", "score": "1-1", "result": "D", "shots": 4, "sot": 2, "poss": "37%", "xg": 0.80, "ga": 1, "corners": 2, "passes": 418, "bigChances": 1 }
+        ],
+        "players": [
+          {
+            "name": "Nestory Irankunda", "initials": "NI", "pos": "FWD", "club": "Watford",
+            "nationality": "Australia", "mins": 310, "rating": 7.8, "injured": false,
+            "goals": 3, "assists": 1, "shots": 9, "sot": 5, "xg": 1.4, "xA": 0.5,
+            "chancesCreated": 8, "successfulDribbles": 11, "duelsWon": 22, "duelsTotal": 34,
+            "tackles": 2, "interceptions": 1, "blocks": 0,
+            "passAcc": 78, "keyPasses": 8, "passes": 128,
+            "note": "20yo explosive winger. 2 goals vs Curacao off the bench. Most dribbles in squad."
+          },
+          {
+            "name": "Mohamed Toure", "initials": "MT", "pos": "FWD", "club": "Norwich City",
+            "nationality": "Australia", "mins": 280, "rating": 7.0, "injured": false,
+            "goals": 1, "assists": 0, "shots": 7, "sot": 3, "xg": 0.9, "xA": 0.2,
+            "chancesCreated": 5, "successfulDribbles": 4, "duelsWon": 18, "duelsTotal": 30,
+            "tackles": 3, "interceptions": 1, "blocks": 0,
+            "passAcc": 75, "keyPasses": 5, "passes": 98,
+            "note": "10 Norwich goals in 25/26. Debut WC. Explosive finisher in transitions."
+          },
+          {
+            "name": "Awer Mabil", "initials": "AM", "pos": "FWD", "club": "Castellón",
+            "nationality": "Australia", "mins": 260, "rating": 7.1, "injured": false,
+            "goals": 1, "assists": 1, "shots": 6, "sot": 3, "xg": 0.8, "xA": 0.4,
+            "chancesCreated": 6, "successfulDribbles": 7, "duelsWon": 16, "duelsTotal": 26,
+            "tackles": 2, "interceptions": 1, "blocks": 0,
+            "passAcc": 77, "keyPasses": 6, "passes": 115,
+            "note": "Scored vs Curacao — 10th international goal. Dangerous wide left."
+          },
+          {
+            "name": "Jackson Irvine", "initials": "JI", "pos": "MID", "club": "St Pauli",
+            "nationality": "Australia", "mins": 340, "rating": 7.0, "injured": false,
+            "goals": 1, "assists": 0, "shots": 5, "sot": 2, "xg": 0.5, "xA": 0.2,
+            "chancesCreated": 6, "successfulDribbles": 2, "duelsWon": 28, "duelsTotal": 44,
+            "tackles": 10, "interceptions": 8, "blocks": 2,
+            "passAcc": 85, "keyPasses": 6, "passes": 285,
+            "note": "Third WC. St Pauli captain. Sets tempo, defensive discipline with technical quality."
+          },
+          {
+            "name": "Aiden O'Neill", "initials": "AO", "pos": "MID", "club": "NYCFC",
+            "nationality": "Australia", "mins": 380, "rating": 6.9, "injured": false,
+            "goals": 0, "assists": 1, "shots": 3, "sot": 1, "xg": 0.2, "xA": 0.3,
+            "chancesCreated": 5, "successfulDribbles": 2, "duelsWon": 24, "duelsTotal": 38,
+            "tackles": 11, "interceptions": 9, "blocks": 2,
+            "passAcc": 87, "keyPasses": 5, "passes": 318,
+            "note": "Midfield engine. Covers enormous ground. Key pressing trigger."
+          },
+          {
+            "name": "Jordan Bos", "initials": "JB", "pos": "DEF", "club": "Feyenoord",
+            "nationality": "Australia", "mins": 360, "rating": 7.3, "injured": false,
+            "goals": 2, "assists": 1, "shots": 5, "sot": 3, "xg": 0.9, "xA": 0.4,
+            "chancesCreated": 7, "successfulDribbles": 5, "duelsWon": 22, "duelsTotal": 34,
+            "tackles": 9, "interceptions": 5, "blocks": 1,
+            "passAcc": 84, "keyPasses": 7, "passes": 278,
+            "note": "Left wingback. Scored late winner vs Cameroon + goal vs Curacao. 14 international goals."
+          },
+          {
+            "name": "Harry Souttar", "initials": "HS", "pos": "DEF", "club": "Leicester City",
+            "nationality": "Australia", "mins": 270, "rating": 7.1, "injured": false,
+            "goals": 0, "assists": 0, "shots": 2, "sot": 0, "xg": 0.2, "xA": 0.0,
+            "chancesCreated": 1, "successfulDribbles": 0, "duelsWon": 28, "duelsTotal": 44,
+            "tackles": 12, "interceptions": 7, "blocks": 4,
+            "passAcc": 88, "keyPasses": 1, "passes": 228,
+            "note": "Twice recovered from major injury. Aerial colossus — dominant set-piece defender."
+          },
+          {
+            "name": "Alessandro Circati", "initials": "AC", "pos": "DEF", "club": "Parma",
+            "nationality": "Australia", "mins": 390, "rating": 7.0, "injured": false,
+            "goals": 1, "assists": 0, "shots": 3, "sot": 1, "xg": 0.3, "xA": 0.0,
+            "chancesCreated": 1, "successfulDribbles": 0, "duelsWon": 26, "duelsTotal": 42,
+            "tackles": 11, "interceptions": 7, "blocks": 3,
+            "passAcc": 89, "keyPasses": 1, "passes": 258,
+            "note": "Scored headed goal vs Curacao. Emerged as key CB across both March friendlies."
+          },
+          {
+            "name": "Mathew Ryan", "initials": "MR", "pos": "GK", "club": "Levante",
+            "nationality": "Australia", "mins": 360, "rating": 7.1, "injured": false,
+            "goals": 0, "assists": 0, "shots": 0, "sot": 0, "xg": 0.0, "xA": 0.0,
+            "chancesCreated": 0, "successfulDribbles": 0, "duelsWon": 0, "duelsTotal": 0,
+            "tackles": 0, "interceptions": 0, "blocks": 0,
+            "passAcc": 74, "keyPasses": 0, "passes": 185,
+            "note": "Captain. 4th World Cup. Denied Alexis Vega brilliantly vs Mexico. Still elite at 35."
+          }
+        ],
+        "h2h": {
+          "opp": "USA", "oppFlag": "🇺🇸", "date": "Oct 15 2025",
+          "score": "1-2", "venue": "Lumen Field, Seattle", "winner": "USA",
+          "scorers": "Irvine 55' | Pulisic 12', Balogun 78'",
+          "rows": [
+            { "metric": "Result", "left": "1-2 (L)", "right": "2-1 (W)", "highlight": true },
+            { "metric": "Possession", "left": "43%", "right": "57%" },
+            { "metric": "Total shots", "left": "8", "right": "14" },
+            { "metric": "Shots on target", "left": "3", "right": "5" },
+            { "metric": "xG", "left": "0.82", "right": "1.35" },
+            { "metric": "Big chances", "left": "1", "right": "3" },
+            { "metric": "Corners", "left": "3", "right": "6" },
+            { "metric": "Fouls committed", "left": "12", "right": "10" },
+            { "metric": "GK saves", "left": "3", "right": "2" },
+            { "metric": "Yellow cards", "left": "2", "right": "1" }
+          ],
+          "insights": [
+            { "title": "USA home advantage is real", "body": "USA won their 3rd straight friendly vs Australia, all on US soil. Same venue for WC group stage." },
+            { "title": "Irankunda changes the equation", "body": "Not in lineup for Oct match — his addition to WC squad significantly lifts Australia's attack." },
+            { "title": "Australia defend well but lack cutting edge", "body": "3 shots on target, 1 big chance — competitive but the quality gap in attack showed." }
+          ]
+        }
+      },
+      {
+        "name": "Turkiye",
+        "flag": "🇹🇷",
+        "fifa": 25,
+        "manager": "Vincenzo Montella",
+        "formation": "4-2-3-1",
+        "form": ["W", "D", "W", "W", "L"],
+        "formMatches": [
+          "vs Venezuela 2-1 W (Jun 6 2026)",
+          "vs Spain 2-2 D (Nov 18 2025)",
+          "vs Bulgaria 2-0 W (Nov 15 2025)",
+          "vs Georgia 4-1 W (Oct 14 2025)",
+          "vs Spain 0-6 L (Sep 7 2025)"
+        ],
+        "avg": {
+          "goals": 2.8, "goalsAgainst": 2.0, "xg": 1.48, "xgAgainst": 1.62,
+          "shots": 13.8, "shotsOnTarget": 5.8, "possession": "51%",
+          "passAccuracy": "83%", "passes": 448, "corners": 5.6,
+          "bigChances": 2.4, "fouls": 12.6, "saves": 3.2, "cleanSheets": "1/5",
+          "tackles": 13.4, "interceptions": 9.2, "duelsWon": 50, "aerialWon": "51%",
+          "shotConversion": "20%", "sotConversion": "48%"
+        },
+        "totals": {
+          "goals": 14, "goalsAgainst": 10, "shots": 69, "shotsOnTarget": 29,
+          "passes": 2240, "xg": 7.4, "bigChances": 12, "corners": 28,
+          "fouls": 63, "saves": 16, "tackles": 67, "interceptions": 46,
+          "duelsWon": 250, "yellowCards": 8, "redCards": 0
+        },
+        "matches": [
+          { "opp": "Spain", "date": "Sep 7 2025", "venue": "A", "score": "0-6", "result": "L", "shots": 6, "sot": 1, "poss": "33%", "xg": 0.38, "ga": 6, "corners": 2, "passes": 285, "bigChances": 0 },
+          { "opp": "Bulgaria", "date": "Oct 11 2025", "venue": "A", "score": "6-1", "result": "W", "shots": 22, "sot": 10, "poss": "62%", "xg": 2.85, "ga": 1, "corners": 9, "passes": 542, "bigChances": 5 },
+          { "opp": "Georgia", "date": "Oct 14 2025", "venue": "H", "score": "4-1", "result": "W", "shots": 18, "sot": 8, "poss": "58%", "xg": 2.10, "ga": 1, "corners": 7, "passes": 498, "bigChances": 4 },
+          { "opp": "Bulgaria", "date": "Nov 15 2025", "venue": "H", "score": "2-0", "result": "W", "shots": 14, "sot": 6, "poss": "55%", "xg": 1.42, "ga": 0, "corners": 6, "passes": 462, "bigChances": 3 },
+          { "opp": "Spain", "date": "Nov 18 2025", "venue": "A", "score": "2-2", "result": "D", "shots": 9, "sot": 4, "poss": "38%", "xg": 0.95, "ga": 2, "corners": 4, "passes": 340, "bigChances": 1 },
+          { "opp": "Venezuela", "date": "Jun 6 2026", "venue": "N", "score": "2-1", "result": "W", "shots": 16, "sot": 8, "poss": "52%", "xg": 1.53, "ga": 1, "corners": 12, "passes": 362, "bigChances": 2 }
+        ],
+        "players": [
+          {
+            "name": "Arda Güler", "initials": "AG", "pos": "FWD", "club": "Real Madrid",
+            "nationality": "Turkiye", "mins": 420, "rating": 7.8, "injured": false,
+            "goals": 3, "assists": 4, "shots": 14, "sot": 7, "xg": 1.8, "xA": 1.2,
+            "chancesCreated": 18, "successfulDribbles": 12, "duelsWon": 22, "duelsTotal": 34,
+            "tackles": 3, "interceptions": 2, "blocks": 0,
+            "passAcc": 84, "keyPasses": 18, "passes": 268,
+            "note": "21yo Real Madrid star. Led all Madrid players for chances created in 25/26 (111). Tournament's most anticipated young player."
+          },
+          {
+            "name": "Kenan Yildiz", "initials": "KY", "pos": "FWD", "club": "Juventus",
+            "nationality": "Turkiye", "mins": 380, "rating": 7.7, "injured": false,
+            "goals": 3, "assists": 2, "shots": 12, "sot": 6, "xg": 1.5, "xA": 0.8,
+            "chancesCreated": 14, "successfulDribbles": 14, "duelsWon": 20, "duelsTotal": 32,
+            "tackles": 2, "interceptions": 1, "blocks": 0,
+            "passAcc": 82, "keyPasses": 14, "passes": 228,
+            "note": "3.5 dribbles per 90 in qualifying — only Doku and Kvaratskhelia bettered that. Juventus star, 20yo."
+          },
+          {
+            "name": "Kerem Aktürkoglu", "initials": "KA", "pos": "FWD", "club": "Fenerbahce",
+            "nationality": "Turkiye", "mins": 340, "rating": 7.2, "injured": false,
+            "goals": 2, "assists": 2, "shots": 10, "sot": 4, "xg": 1.1, "xA": 0.6,
+            "chancesCreated": 10, "successfulDribbles": 8, "duelsWon": 18, "duelsTotal": 30,
+            "tackles": 3, "interceptions": 2, "blocks": 0,
+            "passAcc": 78, "keyPasses": 10, "passes": 188,
+            "note": "Pace and directness on the right wing. Scored quick-fire goal vs USA in June 2025 friendly."
+          },
+          {
+            "name": "Hakan Calhanoglu", "initials": "HC", "pos": "MID", "club": "Inter Milan",
+            "nationality": "Turkiye", "mins": 450, "rating": 7.5, "injured": false,
+            "goals": 2, "assists": 4, "shots": 8, "sot": 4, "xg": 0.9, "xA": 1.1,
+            "chancesCreated": 16, "successfulDribbles": 4, "duelsWon": 26, "duelsTotal": 42,
+            "tackles": 12, "interceptions": 10, "blocks": 2,
+            "passAcc": 89, "keyPasses": 16, "passes": 412,
+            "note": "Captain. Chief creator — 4 assists in last 5. Dictates tempo from deep. Inter Milan's engine."
+          },
+          {
+            "name": "Orkun Kökcü", "initials": "OK", "pos": "MID", "club": "Besiktas",
+            "nationality": "Turkiye", "mins": 380, "rating": 7.0, "injured": false,
+            "goals": 1, "assists": 2, "shots": 5, "sot": 2, "xg": 0.5, "xA": 0.6,
+            "chancesCreated": 9, "successfulDribbles": 3, "duelsWon": 24, "duelsTotal": 38,
+            "tackles": 10, "interceptions": 8, "blocks": 1,
+            "passAcc": 86, "keyPasses": 9, "passes": 348,
+            "note": "Box-to-box energy alongside Calhanoglu. Pressing trigger and set-piece delivery."
+          },
+          {
+            "name": "Merih Demiral", "initials": "MD", "pos": "DEF", "club": "Al-Ahli",
+            "nationality": "Turkiye", "mins": 450, "rating": 7.1, "injured": false,
+            "goals": 2, "assists": 0, "shots": 4, "sot": 2, "xg": 0.5, "xA": 0.0,
+            "chancesCreated": 2, "successfulDribbles": 0, "duelsWon": 34, "duelsTotal": 54,
+            "tackles": 14, "interceptions": 10, "blocks": 5,
+            "passAcc": 86, "keyPasses": 2, "passes": 322,
+            "note": "2 goals in last 5 — aerial threat at set-pieces. Strong defensive leader."
+          },
+          {
+            "name": "Ferdi Kadioglu", "initials": "FK", "pos": "DEF", "club": "Brighton",
+            "nationality": "Turkiye", "mins": 420, "rating": 7.0, "injured": false,
+            "goals": 0, "assists": 2, "shots": 3, "sot": 1, "xg": 0.2, "xA": 0.5,
+            "chancesCreated": 7, "successfulDribbles": 5, "duelsWon": 24, "duelsTotal": 38,
+            "tackles": 11, "interceptions": 7, "blocks": 2,
+            "passAcc": 85, "keyPasses": 7, "passes": 345,
+            "note": "Left back with attacking intent. Brighton's quality shows — overlapping runs and crosses."
+          },
+          {
+            "name": "Ugurcan Cakir", "initials": "UC", "pos": "GK", "club": "Galatasaray",
+            "nationality": "Turkiye", "mins": 450, "rating": 6.9, "injured": false,
+            "goals": 0, "assists": 0, "shots": 0, "sot": 0, "xg": 0.0, "xA": 0.0,
+            "chancesCreated": 0, "successfulDribbles": 0, "duelsWon": 0, "duelsTotal": 0,
+            "tackles": 0, "interceptions": 0, "blocks": 0,
+            "passAcc": 71, "keyPasses": 0, "passes": 158,
+            "note": "16 saves across 5 matches. Kept clean sheet vs Bulgaria. Vocal organiser of backline."
+          }
+        ],
+        "h2h": {
+          "opp": "USA", "oppFlag": "🇺🇸", "date": "Jun 7 2025",
+          "score": "2-1", "venue": "Rentschler Field, Hartford CT", "winner": "Turkiye",
+          "scorers": "Güler 24', Aktürkoglu 27' | McGlynn 1'",
+          "rows": [
+            { "metric": "Result", "left": "2-1 (W)", "right": "1-2 (L)", "highlight": true },
+            { "metric": "Possession", "left": "57%", "right": "43%" },
+            { "metric": "Total shots", "left": "14", "right": "9" },
+            { "metric": "Shots on target", "left": "6", "right": "3" },
+            { "metric": "xG", "left": "1.42", "right": "0.78" },
+            { "metric": "Big chances", "left": "3", "right": "1" },
+            { "metric": "Corners", "left": "8", "right": "4" },
+            { "metric": "Fouls committed", "left": "10", "right": "14" },
+            { "metric": "GK saves", "left": "2", "right": "5" },
+            { "metric": "Yellow cards", "left": "1", "right": "2" }
+          ],
+          "insights": [
+            { "title": "Güler destroyed USA in 2025", "body": "Güler scored and assisted in a 2-1 win — Turkiye's most recent meeting with USA. USA's fullbacks struggled with his movement." },
+            { "title": "USA's rematch motivation", "body": "Jun 26 WC group game is a direct rematch. USA have improved significantly under Pochettino since June 2025." },
+            { "title": "Turkiye's quick-fire combo", "body": "Güler (24') and Aktürkoglu (27') scored within 3 minutes of each other — the two-goal burst is a signature Turkiye pattern." }
+          ]
+        }
       }
-    }
-  ]
-}
+    ]
+  }
